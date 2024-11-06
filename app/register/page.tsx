@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import '../login/style.css'
 import Logo from '../../public/logo.png'
-import GoogleLogo from '../../public/google.png'
 import Register from '../../public/sign-up.jpg'
 import Link from 'next/link'
 
