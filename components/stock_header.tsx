@@ -2,6 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 import logo from '../public/logo.png'
 import Link from 'next/link'
+import Star from '../public/star.png'
+import Notification from '../public/notification.png'
+import Chat from '../public/chat.png'
+import AccountImage from '../public/account.png'
 import './style.css'
 
 const Header = () => {
@@ -27,13 +31,12 @@ const Header = () => {
           })
         }
       </ul>
-      <div className="gap-2 hidden sm:flex">
-        <button className='bg-[#F2F0FE] w-[171px] h-[40px] rounded-xl text-green-500'>Регистрация</button>
-        <button className='bg-[#1DBF73] w-[113px] h-[40px] rounded-xl text-white border-[1px] border-green-500 hover:bg-transparent hover:text-green-500'>Войти</button>
-      </div>
-      <div className="gap-2 flex items-center sm:hidden">
-        <Link href='/' className='text-green-500'>Регистрация</Link>
-        <Link href='/' className='text-black'>Войти</Link>
+      <div className="gap-4 flex items-center">
+        <Image src={Star} alt='star image'/>
+        <Image src={Notification} alt='notification image'/>
+        <Image src={Chat} alt='chat image'/>
+        <h3 className='text-[18px] font-bold hidden md:flex'>Ернар Ибрагимов</h3>
+        <Image className='w-[25%] sm:w-[50px] sm:h-[50px]' src={AccountImage} alt='account image'/>
       </div>
     </div>
   )
