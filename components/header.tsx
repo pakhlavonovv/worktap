@@ -23,7 +23,7 @@ const Header = () => {
       <ul className='gap-5 items-center hidden xl:flex'>
         {
           header_links.map(item => {
-            return <Link className='transition hover:text-green-500' href='/'>{item.title}</Link>
+            return <Link className='transition hover:text-green-500' href='/' key={item.title}  >{item.title}</Link>
           })
         }
       </ul>

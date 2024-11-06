@@ -25,7 +25,7 @@ const Hero = () => {
     <div className="mt-2 flex flex-wrap gap-5 sm:grid sm:grid-cols-2 xl:grid xl:grid-cols-3">
     {
         btn_titles.map(item => {
-            return <button className='border-[1px] border-[#F2F0FE] w-[180px] h-[40px] rounded-lg'>{item.title}</button>
+            return <button className='border-[1px] border-[#F2F0FE] w-[180px] h-[40px] rounded-lg' key={item.title}  >{item.title}</button>
         })
     }
     <button className='border-[1px] border-[#FBA457] w-[180px] h-[40px] rounded-lg text-[#FBA457]'>Все категории</button>
