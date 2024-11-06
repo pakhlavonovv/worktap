@@ -28,12 +28,12 @@ const Header = () => {
         }
       </ul>
       <div className="gap-2 hidden sm:flex">
-        <button className='bg-[#F2F0FE] w-[171px] h-[40px] rounded-xl text-green-500'>Регистрация</button>
-        <button className='bg-[#1DBF73] w-[113px] h-[40px] rounded-xl text-white border-[1px] border-green-500 hover:bg-transparent hover:text-green-500'>Войти</button>
+        <Link href='/register' className='flex items-center justify-center bg-[#F2F0FE] w-[171px] h-[40px] rounded-xl text-green-500'>Регистрация</Link>
+        <Link href='/login' className='flex items-center justify-center bg-[#1DBF73] w-[113px] h-[40px] rounded-xl text-white border-[1px] border-green-500 hover:bg-transparent hover:text-green-500'>Войти</Link>
       </div>
       <div className="gap-2 flex items-center sm:hidden">
         <Link href='/' className='text-green-500'>Регистрация</Link>
-        <Link href='/' className='text-black'>Войти</Link>
+        <Link href='/login' className='text-black'>Войти</Link>
       </div>
     </div>
   )
