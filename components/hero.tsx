@@ -33,7 +33,7 @@ const Hero = () => {
 
         </div>
         <div className='mt-5'>
-            <Image src={HeroImage} alt='Hero Image'/>
+            <Image priority src={HeroImage} alt='Hero Image'/>
         </div>
     </div>
   )

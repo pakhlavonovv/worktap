@@ -8,6 +8,13 @@ import Linkedin from '../public/linkedin.svg'
 
 
 const Footer = () => {
+    const images = [
+        {image: Facebook, alt: 'facebook'},
+        {image: X, alt: 'twitter'},
+        {image: Instagram, alt: 'instagram'},
+        {image: Linkedin, alt: 'linkedin'}
+
+    ]
   return (
     <div className='container grid grid-cols-1 gap-4 items-center justify-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
         <div className="flex flex-col gap-2">
@@ -36,10 +43,11 @@ const Footer = () => {
         <div className="flex flex-col gap-2">
             <h1 className='font-bold text-[25px]'>Follow</h1>
             <div className="flex gap-4">
-            <Image src={Facebook} alt='facebook'/>
-            <Image src={X} alt='twitter'/>
-            <Image src={Instagram} alt='instagram'/>
-            <Image src={Linkedin} alt='linkedin'/> 
+            {
+                images.map(item => {
+                    return <Image className='w-[30px] h-[30px] lg:w-[45px] lg:h-[45px]' priority src={item.image} alt={item.alt}/>
+                })
+            }
             </div>
         </div>
     </div>

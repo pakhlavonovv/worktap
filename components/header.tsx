@@ -3,14 +3,15 @@ import Image from 'next/image'
 import logo from '../public/logo.png'
 import Link from 'next/link'
 import './style.css'
+import { link } from 'fs'
 
 const Header = () => {
   const header_links = [
-    {title: 'Биржа',},
-    {title: 'Ворки'},
-    {title: 'Конкурсы'},
-    {title: 'Создать ворк'},
-    {title: 'Создать заказ'},
+    {title: 'Биржа', link: '/stock'},
+    {title: 'Ворки', link: '/'},
+    {title: 'Конкурсы', link: '/'},
+    {title: 'Создать ворк', link: '/profile'},
+    {title: 'Создать заказ', link: '/'},
 
   ]
   return (
@@ -23,7 +24,7 @@ const Header = () => {
       <ul className='gap-5 items-center hidden xl:flex'>
         {
           header_links.map(item => {
-            return <Link className='transition hover:text-green-500' href='/stock' key={item.title}  >{item.title}</Link>
+            return <Link className='transition hover:text-green-500' href={item.link} key={item.title}  >{item.title}</Link>
           })
         }
       </ul>
