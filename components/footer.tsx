@@ -45,7 +45,7 @@ const Footer = () => {
             <div className="flex gap-4">
             {
                 images.map(item => {
-                    return <Image className='w-[30px] h-[30px] lg:w-[45px] lg:h-[45px]' priority src={item.image} alt={item.alt}/>
+                    return <Image className='w-[30px] h-[30px] lg:w-[45px] lg:h-[45px]' priority key={item.image} src={item.image} alt={item.alt}/>
                 })
             }
             </div>
